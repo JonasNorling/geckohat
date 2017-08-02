@@ -1,4 +1,4 @@
-update=tis  1 aug 2017 17:29:08
+update=ons  2 aug 2017 15:52:01
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=efm32jg1
+LibName31=protoarea
