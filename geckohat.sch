@@ -57,23 +57,12 @@ F 3 "" H 9400 650 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Crystal_Small Y1
-U 1 1 59809C18
-P 1100 4850
-F 0 "Y1" H 1100 4950 50  0000 C CNN
-F 1 "40 MHz" H 1100 4750 50  0000 C CNN
-F 2 "" H 1100 4850 50  0001 C CNN
-F 3 "" H 1100 4850 50  0001 C CNN
-	1    1100 4850
-	0    1    1    0   
-$EndComp
-$Comp
 L Crystal_Small Y2
 U 1 1 59809D39
 P 3900 4250
 F 0 "Y2" H 3900 4350 50  0000 C CNN
 F 1 "32kHz" H 3900 4150 50  0000 C CNN
-F 2 "" H 3900 4250 50  0001 C CNN
+F 2 "Crystals:Crystal_C26-LF_d2.1mm_l6.5mm_Vertical" H 3900 4250 50  0001 C CNN
 F 3 "" H 3900 4250 50  0001 C CNN
 	1    3900 4250
 	0    -1   -1   0   
@@ -212,7 +201,7 @@ F 3 "" H 2100 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 3750 6700 0    60   ~ 0
-U2: AP2210K-3.3, alt: NJM2866F33-TE1, alt: LP2985\nOption: change VREG for 1.8V operation?\nResistor net: Bourns CAY16-221J4LF, is 3.2×1.6 mm\nFIXME:\n  - Add ARM debug header\n  - Connect RPi serial port
+U2: AP2210K-3.3, alt: NJM2866F33-TE1, alt: LP2985\nOption: change VREG for 1.8V operation?\nResistor net: Bourns CAY16-221J4LF, is 3.2×1.6 mm\nCrystal:  TSX-3225 38.4000MF10Z-AS3\nFIXME:\n  - Add ARM debug header\n  - Connect RPi serial port
 $Comp
 L +5V #PWR011
 U 1 1 5980C144
@@ -244,17 +233,6 @@ F 1 "VDD" H 3000 1500 50  0000 C CNN
 F 2 "" H 3000 1350 50  0001 C CNN
 F 3 "" H 3000 1350 50  0001 C CNN
 	1    3000 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L LED_ARGB D1
-U 1 1 5980C2E6
-P 4700 4600
-F 0 "D1" H 4700 4970 50  0000 C CNN
-F 1 "LED_ARGB" H 4700 4250 50  0000 C CNN
-F 2 "LEDs:LED_WS2812-PLCC6" H 4700 4550 50  0001 C CNN
-F 3 "" H 4700 4550 50  0001 C CNN
-	1    4700 4600
 	1    0    0    -1  
 $EndComp
 Text Label 7850 2450 3    60   ~ 0
@@ -300,7 +278,7 @@ U 1 1 5981C65A
 P 2550 4550
 F 0 "U1" H 3150 3850 60  0000 C CNN
 F 1 "EFM32JG1B100F128GM32" H 2550 4550 39  0000 C CNN
-F 2 "Housings_DFN_QFN:QFN-32-1EP_5x5mm_Pitch0.5mm" H 2200 4700 60  0001 C CNN
+F 2 "qfn:QFN-32-handsolder" H 2200 4700 60  0001 C CNN
 F 3 "" H 2200 4700 60  0001 C CNN
 	1    2550 4550
 	1    0    0    -1  
@@ -920,15 +898,7 @@ $EndComp
 Wire Wire Line
 	1200 4800 1700 4800
 Wire Wire Line
-	1200 4800 1200 4750
-Wire Wire Line
-	1200 4750 1100 4750
-Wire Wire Line
 	1200 4900 1700 4900
-Wire Wire Line
-	1200 4900 1200 4950
-Wire Wire Line
-	1200 4950 1100 4950
 Wire Wire Line
 	1150 4100 1700 4100
 Wire Wire Line
@@ -1551,18 +1521,170 @@ Wire Wire Line
 	2800 5800 2800 5400
 Wire Wire Line
 	2900 5800 2900 5400
-Text Label 2300 5800 1    60   ~ 0
+Text Label 2200 3300 3    60   ~ 0
 PROT1
-Text Label 2400 5800 1    60   ~ 0
+Text Label 2300 3300 3    60   ~ 0
 PROT2
-Text Label 2500 5800 1    60   ~ 0
+Text Label 2400 3300 3    60   ~ 0
 PROT3
-Text Label 2600 5800 1    60   ~ 0
+Text Label 2500 3300 3    60   ~ 0
 PROT4
-Text Label 2700 5800 1    60   ~ 0
+Text Label 2600 3300 3    60   ~ 0
 PROT5
-Text Label 2800 5800 1    60   ~ 0
+Text Label 3800 4800 2    60   ~ 0
 PROT6
-Text Label 2900 5800 1    60   ~ 0
+Text Label 3800 4900 2    60   ~ 0
 PROT7
+$Comp
+L GND #PWR044
+U 1 1 59844406
+P 10000 6100
+F 0 "#PWR044" H 10000 5850 50  0001 C CNN
+F 1 "GND" H 10000 5950 50  0000 C CNN
+F 2 "" H 10000 6100 50  0001 C CNN
+F 3 "" H 10000 6100 50  0001 C CNN
+	1    10000 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L VDD #PWR045
+U 1 1 598445C3
+P 10250 5850
+F 0 "#PWR045" H 10250 5700 50  0001 C CNN
+F 1 "VDD" H 10250 6000 50  0000 C CNN
+F 2 "" H 10250 5850 50  0001 C CNN
+F 3 "" H 10250 5850 50  0001 C CNN
+	1    10250 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 5900 10000 6100
+Wire Wire Line
+	10100 5900 10100 6050
+Wire Wire Line
+	10100 6050 10250 6050
+Wire Wire Line
+	10250 6050 10250 5850
+Wire Wire Line
+	2600 3700 2600 3300
+Wire Wire Line
+	2500 3700 2500 3300
+Wire Wire Line
+	2400 3700 2400 3300
+Wire Wire Line
+	2300 3700 2300 3300
+Wire Wire Line
+	2200 3700 2200 3300
+Text Label 2900 5800 1    60   ~ 0
+PROT8
+Text Label 2800 5800 1    60   ~ 0
+PROT9
+Text Label 2700 5800 1    60   ~ 0
+PROT10
+Text Label 2600 5800 1    60   ~ 0
+PROT11
+Text Label 2500 5800 1    60   ~ 0
+PROT12
+Wire Wire Line
+	1700 4400 1350 4400
+Text Label 1350 4400 0    60   ~ 0
+SWD_SWO
+Wire Wire Line
+	3400 4800 3800 4800
+Wire Wire Line
+	3400 4900 3800 4900
+Text Label 2400 5800 1    60   ~ 0
+PROT13
+Text Label 2300 5800 1    60   ~ 0
+PROT14
+$Comp
+L TEST_1P J2
+U 1 1 59847B90
+P 1350 4400
+F 0 "J2" H 1350 4670 50  0000 C CNN
+F 1 "TEST_1P" H 1350 4600 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1mmDrill" H 1550 4400 50  0001 C CNN
+F 3 "" H 1550 4400 50  0001 C CNN
+	1    1350 4400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9100 6400 9100 5900
+Wire Wire Line
+	9200 6400 9200 5900
+Wire Wire Line
+	9300 6400 9300 5900
+Wire Wire Line
+	9400 6400 9400 5900
+Wire Wire Line
+	9500 6400 9500 5900
+Wire Wire Line
+	9600 6400 9600 5900
+Wire Wire Line
+	9700 6400 9700 5900
+Text Label 9100 6400 1    60   ~ 0
+PROT8
+Text Label 9200 6400 1    60   ~ 0
+PROT9
+Text Label 9300 6400 1    60   ~ 0
+PROT10
+Text Label 9400 6400 1    60   ~ 0
+PROT11
+Text Label 9500 6400 1    60   ~ 0
+PROT12
+Text Label 9600 6400 1    60   ~ 0
+PROT13
+Text Label 9700 6400 1    60   ~ 0
+PROT14
+Wire Wire Line
+	1200 4800 1200 4700
+Wire Wire Line
+	1200 4700 900  4700
+Wire Wire Line
+	1200 4900 1200 5000
+Wire Wire Line
+	1200 5000 900  5000
+Wire Wire Line
+	1100 4850 1100 5100
+Wire Wire Line
+	1100 5100 700  5100
+Wire Wire Line
+	700  4850 700  5200
+Connection ~ 700  5100
+$Comp
+L GND #PWR046
+U 1 1 5984A03E
+P 700 5200
+F 0 "#PWR046" H 700 4950 50  0001 C CNN
+F 1 "GND" H 700 5050 50  0000 C CNN
+F 2 "" H 700 5200 50  0001 C CNN
+F 3 "" H 700 5200 50  0001 C CNN
+	1    700  5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Crystal_GND24 Y1
+U 1 1 5984A564
+P 900 4850
+F 0 "Y1" H 1025 5050 50  0000 L CNN
+F 1 "38.4 MHz" H 1025 4975 50  0000 L CNN
+F 2 "Crystals:Crystal_SMD_SeikoEpson_FA238-4pin_3.2x2.5mm_HandSoldering" H 900 4850 50  0001 C CNN
+F 3 "" H 900 4850 50  0001 C CNN
+	1    900  4850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED_RGB D?
+U 1 1 5984CA47
+P 4700 4600
+F 0 "D?" H 4700 4970 50  0000 C CNN
+F 1 "LED_RGB" H 4700 4250 50  0000 C CNN
+F 2 "" H 4700 4550 50  0001 C CNN
+F 3 "" H 4700 4550 50  0001 C CNN
+	1    4700 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 4400 4900 4800
+Connection ~ 4900 4600
 $EndSCHEMATC
