@@ -3,7 +3,7 @@
   (general
     (links 186)
     (no_connects 17)
-    (area 121.094999 71.354999 186.245001 127.505001)
+    (area 117.268571 69.995 187.000001 129.465)
     (thickness 1.6)
     (drawings 22)
     (tracks 700)
@@ -13,6 +13,11 @@
   )
 
   (page A4)
+  (title_block
+    (title "Raspberry Pi Gecko hat")
+    (company "Jonas Norling")
+  )
+
   (layers
     (0 F.Cu signal)
     (31 B.Cu signal)
