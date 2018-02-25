@@ -1,4 +1,4 @@
-update=fre  4 aug 2017 18:03:13
+update=tis 29 aug 2017 19:13:32
 version=1
 last_client=eeschema
 [general]
@@ -61,3 +61,13 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=efm32jg1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

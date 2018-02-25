@@ -201,7 +201,7 @@ F 3 "" H 2100 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 3750 6700 0    60   ~ 0
-U2: AP2210K-3.3, alt: NJM2866F33-TE1, alt: LP2985\nOption: change VREG for 1.8V operation?\nResistor net: Bourns CAY16-221J4LF, is 3.2×1.6 mm\nCrystal:  TSX-3225 38.4000MF10Z-AS3\nFIXME:\n  - Add ARM debug header\n  - reset switch option\n  - Elemental logo\n  - OSHW logo\n  - Revision info on bottom side\n  - Jumpers over resistor nets\n  - 3V3 vreg bypass jumper
+U2: AP2210K-3.3, alt: NJM2866F33-TE1, alt: LP2985\nOption: change VREG for 1.8V operation?\nResistor net: Bourns CAY16-221J4LF, is 3.2×1.6 mm\nCrystal:  TSX-3225 38.4000MF10Z-AS3\nFIXME:\n  - Add ARM debug header\n  - reset switch option\n  - Elemental logo\n  - OSHW logo\n  - Revision info on bottom side\n  - Jumpers over resistor nets\n  - 3V3 vreg bypass jumper\n  - Isolate GND on bottom of U1 and add thermals, for solderability
 $Comp
 L +5V #PWR011
 U 1 1 5980C144
