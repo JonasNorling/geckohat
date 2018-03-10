@@ -3,7 +3,7 @@
   (general
     (links 194)
     (no_connects 18)
-    (area 117.268571 69.265 187.000001 129.465)
+    (area 121.094999 71.354999 186.245001 127.505001)
     (thickness 1.6)
     (drawings 31)
     (tracks 705)
@@ -418,9 +418,9 @@
     (pad 40 thru_hole oval (at 2.54 48.26 90) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 43 /GPIO21))
     (model Pin_Headers.3dshapes/Pin_Header_Straight_2x20_Pitch2.54mm.wrl
-      (at (xyz 0.05 -0.95 0))
+      (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 90))
+      (rotate (xyz 0 0 0))
     )
   )
 
